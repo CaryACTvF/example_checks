@@ -9,7 +9,7 @@ class Similarities(Checks):
         """hello.py exists"""
         self.require("hello.py")
         
-    @check("compiles")
+    @check("exists")
     def hello(self):
         """prints "Hello world!" """
         self.spawn("python3 ./hello.py").stdout("Hello world!", "Hello world!")
